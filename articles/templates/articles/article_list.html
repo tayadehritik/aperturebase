@@ -9,6 +9,16 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h1>Article</h1>    
+    <h1>Article</h1> 
+    <div class="article">
+        {% for i in article %}
+            <div class='article'>
+                <h4>{{i.title}}</h4>
+               
+                <p>{{i.snippet}}</p>
+                <h5>{{i.date}}</h5>
+            </div>
+        {% endfor %}
+    </div>   
 </body>
 </html>
