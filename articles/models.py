@@ -8,6 +8,7 @@ class Articles(models.Model):
     body = models.TextField()
     slug = models.SlugField(null=True)
     date = models.DateTimeField(auto_now_add=True)
+    thumb = models.ImageField(default='default.png',blank=True)
 
     def __str__(self):
         return self.title

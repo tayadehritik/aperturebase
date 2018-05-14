@@ -1,3 +1,13 @@
 body {
-    background: blue;
+    background: white;
+}
+.imgse{
+    background-color: yellow;
+    height:5px;
+}
+.over{
+    height:100px;
+    width:100px;
+    margin-left: 10px;
+    margin-top:10px;
 }
