@@ -1,15 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Article</h1> 
-    <div class="article">
+
+    <h1 class="text-center">Articles</h1> 
+    <br>
+    <div>
+        <div class='container-fluid'>
+        <div class='row'>
         {% for i in article %}
-            <div class='article'>
-                <h4><a href="{% url 'articles:detail' slug=i.slug %} ">{{i.title}}</a></h4>
+            <div class="col-sm-1"></div>
+            
+            <div class=' col-sm-3 text-center' style="padding:10px" >
+                <div style="background: yellow">
+                <br>
+                <h4><a href="{% url 'articles:detail' slug=i.slug %} " >{{i.title}}</a></h4>
                
                 <p>{{i.snippet}}</p>
                 <h5>{{i.date}}</h5>
+                <br>
+                </div>
             </div>
+            
         {% endfor %}
-    </div>   
+        </div>
+        </div>
+    </div>
+    
+  
 {% endblock %}
