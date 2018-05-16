@@ -8,7 +8,7 @@ class Articles(models.Model):
     body = models.TextField()
     slug = models.SlugField(null=True)
     date = models.DateTimeField(auto_now_add=True)
-    thumb = models.ImageField(default='default.png',blank=True)
+    thumb = models.ImageField(default='skate.jpg',blank=True)
     img0 = models.ImageField(default='default.png', blank=True)
     img1 = models.ImageField(default = 'default.png',blank=True)
     img2 = models.ImageField(default='default.png', blank=True)

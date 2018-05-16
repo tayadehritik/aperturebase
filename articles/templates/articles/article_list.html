@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+    <br>
     <h1 class="text-center">Articles</h1> 
     <br>
+    <!--TODO:: thumbnail sathi upload kartanna image predef resolution mdhe cut karayachi
+        TODO::  thumbnail aathvan thevjo w3 var kuth tari pahla hota aapan example with cards
+    -->
     
     <div>
         <div class='container-fluid'>
@@ -15,10 +18,10 @@
                 <span class='border border-primary'>
                 <div  id="main-" class = "cc well card card-success" style="" >
                 <br>
-                <h4>{{i.title}}</h4>
+                <h4 style="color: white;font-family: 'Oswald'">{{i.title}}</h4>
                
-                <h5>{{i.snippet}}</h5>
-                <h5>{{i.date}}</h5>
+                <h5 style="color: white;font-family: 'Roboto Condensed';">{{i.snippet}}</h5>
+                <h5 style="color: white;font-family: 'Oswald';">{{i.date}}</h5>
                 <br>
                 </div>
                 </span>

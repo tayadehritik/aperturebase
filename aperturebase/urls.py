@@ -23,8 +23,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$',views.home),
-    url(r'^articles/', include('articles.urls'))
+    url(r'^$',views.home,name='homeurl'),
+    url(r'^articles/', include('articles.urls'), name='articlesurl'),
 
 ]
 

@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -16,25 +25,49 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'base.css' %}" />
     <style>
+      .well{
+        background: #000000;
+      }
+      .navbar-inverse{
+    background-color: #000000;
+        }
         p {
           font-size:50px;
+          font-family: 'Roboto Condensed';
+          color:white;
+          display: block;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 15px;
+            margin-right: 15px;
+            text-indent:1em;  
+        text-align:justify;
+        }
+        h1{
+          font-family: 'Luckiest Guy';
+          color:#000000;
+        }
+        h3{
+          font-family: 'Oswald';
+          color: #000000;
         }
         
         @media screen and (min-width: 601px) {
          p {
-            font-size: 30px;
+            font-size: 21px;
+            
           }
           h1{
-            font-size: 50px;
+            font-size: 45px;
           }
           h3{
-            font-size: 40px;
+            font-size: 30px;
           }
         }
         
         @media screen and (max-width: 600px) {
           p {
-            font-size: 15px;
+            font-size: 12.5px;
           }
           h1{
             font-size: 25px;
@@ -56,24 +89,23 @@
                       <span class="icon-bar"></span>                        
                     </button>
                     <a class="navbar-brand" href="#"><img src="{% static 'Gt.png' %}"  class="navbar-left"  style="margin-top: -8;" width=30 height=30/></a>
-                    <a class="navbar-brand">Aperture Minimus</a>
+                    <a class="navbar-brand" style="font-family: 'Viga';text-transform: uppercase;color:white;">Aperture Minimus</a>
                   </div>
                   <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                      <li class="active"><a href="#">Home</a></li>
+                      <li class="active"><a href="{% url 'homeurl' %}" style="font-family: 'Viga';text-transform: uppercase;color:white;">Home</a></li>
                       
-                      <li><a href="#">Page 2</a></li>
-                      <li><a href="#">Page 3</a></li>
+                      <li><a href="{% url 'articles:list'  %}" style="font-family: 'Rubik';text-transform: uppercase;color:white;">Articles</a></li>
+                      <li><a href="#" style="font-family: 'Rubik';text-transform: uppercase;color:white;">Page 3</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                      
-                      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Right Page</a></li>
+                      <li><a href="#" style="font-family: 'Rubik';text-transform: uppercase;color:white;"><span class="glyphicon glyphicon-log-in"></span> Right Page</a></li>
                     </ul>
                   </div>
                 </div>
               </nav>
-    <div class="wrapper">
-    <div>
+    
    <div>
     {% block content %}
     
