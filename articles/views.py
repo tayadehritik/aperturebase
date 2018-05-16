@@ -18,10 +18,15 @@ def article_detail(request,slug):
         a = body.find('!! '+i+" !!")
         #exec('art1.'+body[a+3:a+8]+'.url')
         if(a!=-1):
-
             b = getattr(art1,i).url
+            if(body[a+12:a+15]=="por"):
 
-            body = body[:a] + "<img src=" + "'" +b+"'"+" class='img-fluid sizer' style='margin: 0 auto; border: 5px solid;'/>"+body[a+10:len(body)]
+                
+
+                body = body[:a] + "<img src=" + "'" +b+"'"+" class='img-fluid sizer-por' style='margin: 0 auto; border: 5px solid;'/>"+body[a+15:len(body)]
+            else:
+
+                body = body[:a] + "<img src=" + "'" +b+"'"+" class='img-fluid sizer' style='margin: 0 auto; border: 5px solid;'/>"+body[a+10:len(body)]
         else:
             pass
     return render(request, 'articles/article_detail.html',{'art1':art1,'final':body})
