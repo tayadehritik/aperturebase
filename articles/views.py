@@ -21,7 +21,7 @@ def article_detail(request,slug):
 
             b = getattr(art1,i).url
 
-            body = body[:a] + "<img src=" + "'" +b+"'"+" class='img-responsive ' style='margin: 0 auto;width:100%; border: 5px solid;'/>"+body[a+10:len(body)]
+            body = body[:a] + "<img src=" + "'" +b+"'"+" class='img-fluid sizer' style='margin: 0 auto; border: 5px solid;'/>"+body[a+10:len(body)]
         else:
             pass
     return render(request, 'articles/article_detail.html',{'art1':art1,'final':body})
