@@ -24,7 +24,14 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'base.css' %}" />
-    <style>
+    <style> 
+      @font-face {
+          font-family: 'Arkhip';
+         src:  url("{% static 'Arkhip_font.ttf' %}")  format('truetype'); 
+      } 
+      .font-fam{
+        font-family: 'Arkhip';
+      }     
       .well{
         background: black;
       }
@@ -48,7 +55,7 @@
         text-justify:inter-word;
         }
         h1{
-          font-family: 'Luckiest Guy';
+          /*font-family: 'Luckiest Guy';*/
           color:#000000;
         }
         h3{
