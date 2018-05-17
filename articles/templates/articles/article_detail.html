@@ -6,6 +6,15 @@
         <!--<img src="{{art1.thumb.url}}" class='img-responsive img-center' style="margin: 0 auto;width:80%; height:80%;" />--> 
         <h1  class='text-center font-fam'>{{art1.title|title}}</h1>
         <h3  class="text-center">{{art1.date}}</h3><br>
+        <div class='text-center'>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{rev}}" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            &nbsp;
+            <a href='https://pinterest.com/pin/create/button/?url={{rev}}&description=Check out this cool article'><i class="fa fa-pinterest" style="color:#bd0819;"></i></a>
+            &nbsp;
+            <a href="https://twitter.com/intent/tweet?hashtags=ApertureMinimusPhotography&text=Check out this cool article at {{rev}}"> <i class="fa fa-twitter" ></i></a>
+        </div>
+        
+        <br>
         <p  >{{final|safe}}</p>
     </div>
 {% endblock %}

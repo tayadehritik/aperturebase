@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Articles
+from django.urls import reverse
+
 # Create your views here.
 def article_list(request):
     article = Articles.objects.all().order_by('date')
@@ -30,4 +32,7 @@ def article_detail(request,slug):
                 body = body[:a] + "</p><div class='text-center ' style='margin-left:50px;margin-right:50px;margin-top:1em;margin-bottom:1em;'><img src=" + "'" +b+"'"+" class='img-fluid sizer ' style='margin: 5 auto;'/><div class='text-center cap'><br><i>"+c+"</i></div></div><p>"+body[a+10:len(body)] 
         else:
             pass
-    return render(request, 'articles/article_detail.html',{'art1':art1,'final':body})
+    rev_url = reverse('articles:detail',kwargs={'slug': art1.slug})
+    homeurl = 'www.apertureminimus.in'
+
+    return render(request, 'articles/article_detail.html',{'art1':art1,'final':body,'rev':homeurl+rev_url})

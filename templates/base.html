@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
@@ -68,6 +69,14 @@
             font-size: 21px;
             
           }
+          .naver-font{
+            margin-top:14px;
+            margin-left:5px;
+          }
+          
+          .fa{
+            font-size:48px;
+          }
           h1{
             font-size: 45px;
           }
@@ -89,9 +98,20 @@
         
         @media screen and (max-width: 600px) {
           p {
-            font-size: 12.5px;
+            font-size: 15px;
             margin-left: 50px;
             margin-right: 50px;
+          }
+          .naver-logo{
+            display: none;
+            /*margin-left:15px;*/
+          }
+          .naver-font{
+           /*display: none;*/
+           margin-left:10px;
+          }
+          .fa{
+            font-size:27px;
           }
           h1{
             font-size: 25px;
@@ -121,8 +141,8 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="#"><img src="{% static 'Gt.png' %}"  class="navbar-left"  style="margin-top: -8;" width=30 height=30/></a>
-                    <a class="navbar-brand" style="font-family: 'Viga';text-transform: uppercase;color:white;">Aperture Minimus</a>
+                    <a class="navbar-left naver-logo" href="{% url 'homeurl' %}"><img src="{% static 'Gt.png' %}"  class="navbar-left"  style="margin-top: 10px;" width=30 height=30/></a>
+                    <a class="navbar-left " href="{% url 'homeurl' %}" style="font-family: 'Viga';text-transform: uppercase;color:white;"><h2 style='font-size:20px;' class='naver-font'>ApertureMinimus</h2></a>
                   </div>
                   <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
