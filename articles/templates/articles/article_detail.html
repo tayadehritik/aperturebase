@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="art1" style="background: #E0E0E0;">
+    <div class="art1" style="background: white;">
         <br>
         <!--<img src="{{art1.thumb.url}}" class='img-responsive img-center' style="margin: 0 auto;width:80%; height:80%;" />--> 
         <h1  class='text-center'>{{art1.title|title}}</h1>
         <h3  class="text-center">{{art1.date}}</h3><br>
-        <p  class="text-center well">{{final|safe}}</p>
+        <p  >{{final|safe}}</p>
     </div>
 {% endblock %}
