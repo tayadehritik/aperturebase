@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -30,6 +31,21 @@
           font-family: 'Arkhip';
          src:  url("{% static 'Arkhip_font.ttf' %}")  format('truetype'); 
       } 
+      .foot{
+        clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+      }
+
+      .hor{
+        height:5px;
+        background: black;
+        margin:0 auto;
+
+      }
+      
       .font-fam{
         font-family: 'Arkhip';
         margin-left:10px;
@@ -71,6 +87,9 @@
             font-size: 21px;
             
           }
+          .hor{
+            width: 300px;
+          }
           .naver-font{
             margin-top:14px;
             margin-left:5px;
@@ -93,6 +112,7 @@
             height: 700px;
             width:500px;
           }
+         
           .cap{
             font-size:20px;
           }
@@ -104,6 +124,10 @@
             margin-left: 35px;
             margin-right: 35px;
           }
+          .hor{
+            
+            width:80px;
+          }
           .naver-logo{
             display: none;
             /*margin-left:15px;*/
@@ -113,7 +137,7 @@
            margin-left:10px;
           }
           .fa{
-            font-size:27px;
+            font-size:33px;
           }
           h1{
             font-size: 25px;
@@ -121,6 +145,7 @@
           h3{
             font-size:20px;
           }
+          
           .sizer{
             width:100%;
           }
@@ -135,7 +160,7 @@
    
 </head>
 <body>
-        <nav class="navbar navbar-inverse" >
+        <nav class="navbar navbar-fixed-top navbar-inverse" >
                 <div class="container-fluid">
                   <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -148,24 +173,29 @@
                   </div>
                   <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                      <li class="active"><a href="{% url 'homeurl' %}" style="font-family: 'Viga';text-transform: uppercase;color:white;">Home</a></li>
+                      <li class="active"><a href="{% url 'homeurl' %}" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Home</b></a></li>
                       
-                      <li><a href="{% url 'articles:list'  %}" style="font-family: 'Rubik';text-transform: uppercase;color:white;">Articles</a></li>
-                      <li><a href="#" style="font-family: 'Rubik';text-transform: uppercase;color:white;">Page 3</a></li>
+                      <li><a href="{% url 'articles:list'  %}" style="font-family: 'Rubik';text-transform: uppercase;color:white;"><b>Articles</b></a></li>
+                      <li><a href="#" style="font-family: 'Rubik';text-transform: uppercase;color:white;"><b>Page 3</b></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                      
-                      <li><a href="#" style="font-family: 'Rubik';text-transform: uppercase;color:white;"><span class="glyphicon glyphicon-log-in"></span> Right Page</a></li>
+                      <li><a href="#" style="font-family: 'Rubik';text-transform: uppercase;color:white;"><span class="glyphicon glyphicon-log-in"></span><b> Right Page</b></a></li>
                     </ul>
                   </div>
                 </div>
               </nav>
-    
+            
    <div>
+     <br>
+     <br>
     {% block content %}
     
     {% endblock %}
     </div>
-
+    <br>
+    <br>
+    
+   
 </body>
 </html>

@@ -35,4 +35,23 @@ def article_detail(request,slug):
     rev_url = reverse('articles:detail',kwargs={'slug': art1.slug})
     homeurl = 'www.apertureminimus.in'
 
-    return render(request, 'articles/article_detail.html',{'art1':art1,'final':body,'rev':homeurl+rev_url})
+    Allobj = Articles.objects.all()
+    for i in range(len(Allobj)):
+        if(Allobj[i].slug == art1.slug):
+            currentpos = i
+            if(i == len(Allobj)-1):
+                prevobj = Allobj[i-1].slug
+                nextobj = prevobj
+            elif(i == 0):
+                nextobj = Allobj[i+1].slug
+                prevobj = nextobj
+            else:
+                nextobj = Allobj[i+1].slug
+                prevobj = Allobj[i-1].slug
+           
+
+   
+       
+
+    
+    return render(request, 'articles/article_detail.html',{'art1':art1,'final':body,'rev':homeurl+rev_url,'next':nextobj,'prev':prevobj})

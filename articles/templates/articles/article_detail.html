@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <br>
     <div class="art1" style="background: white;">
         <br>
         <!--<img src="{{art1.thumb.url}}" class='img-responsive img-center' style="margin: 0 auto;width:80%; height:80%;" />--> 
         <h1  class='text-center font-fam'>{{art1.title|title}}</h1>
-        <h3  class="text-center">{{art1.date}}</h3><br>
+        
+        <h3  class="text-center">{{art1.date}}</h3>
+        
         <div class='text-center'>
             <a href="https://www.facebook.com/sharer/sharer.php?u={{rev}}" target="_blank"><i class="fa fa-facebook-square"></i></a>
             &nbsp;
@@ -16,5 +19,10 @@
         
         <br>
         <p  >{{final|safe}}</p>
+        <br>
+        <div class = 'row text-center'>
+        <div class = 'col-md-6'><a href= "{% url 'articles:detail' slug=prev %}"><button class="btn btn-primary" style="background-color:black;font-family: 'Oswald';font-size:18px;">Prev</button></a></div>
+        <div class='col-md-6'><a href = "{% url 'articles:detail' slug=next %}"><button class="btn btn-primary" style="background-color:black;margin:10px;font-family: 'Oswald';font-size: 18px;">Next</button></a></div>
+        </div>
     </div>
 {% endblock %}
