@@ -31,18 +31,23 @@
           font-family: 'Arkhip';
          src:  url("{% static 'Arkhip_font.ttf' %}")  format('truetype'); 
       } 
-      .foot{
-        clear: both;
-    position: relative;
-    z-index: 10;
-    height: 3em;
-    margin-top: -3em;
+      .foot-h{
+        font-family: 'Oswald';
+        color: white;
+      }
+      .foot-t{
+        color: white;
+        font-family: 'Viga';
+        margin-left: 50px;
+        margin-right: 50px;
       }
 
       .hor{
-        height:5px;
-        background: black;
+        height:2px;
+        background: #bababa;
         margin:0 auto;
+        margin-top:10px;
+        margin-bottom:10px;
 
       }
       
@@ -87,16 +92,24 @@
             font-size: 21px;
             
           }
+          .foot-h{
+            font-size:21px;
+          }
           .hor{
-            width: 300px;
+            width: 60px;
           }
           .naver-font{
             margin-top:14px;
             margin-left:5px;
           }
           
+          
+
           .fa{
             font-size:48px;
+          }
+          .fi{
+            font-size:35px;
           }
           h1{
             font-size: 45px;
@@ -124,9 +137,12 @@
             margin-left: 35px;
             margin-right: 35px;
           }
+          .foot-h{
+            font-size:18px;
+          }
           .hor{
             
-            width:80px;
+            width:30px;
           }
           .naver-logo{
             display: none;
@@ -160,6 +176,7 @@
    
 </head>
 <body>
+  
         <nav class="navbar navbar-fixed-top navbar-inverse" >
                 <div class="container-fluid">
                   <div class="navbar-header">
@@ -175,27 +192,59 @@
                     <ul class="nav navbar-nav">
                       <li class="active"><a href="{% url 'homeurl' %}" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Home</b></a></li>
                       
-                      <li><a href="{% url 'articles:list'  %}" style="font-family: 'Rubik';text-transform: uppercase;color:white;"><b>Articles</b></a></li>
-                      <li><a href="#" style="font-family: 'Rubik';text-transform: uppercase;color:white;"><b>Page 3</b></a></li>
+                      <li ><a href="{% url 'articles:list'  %}" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Articles</b></a></li>
+                      <li><a href="#" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Page 3</b></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                      
-                      <li><a href="#" style="font-family: 'Rubik';text-transform: uppercase;color:white;"><span class="glyphicon glyphicon-log-in"></span><b> Right Page</b></a></li>
+                      <li><a href="#" style="font-family: 'Viga';text-transform: uppercase;color:white;"><span class="glyphicon glyphicon-log-in"></span><b> Right Page</b></a></li>
                     </ul>
                   </div>
                 </div>
               </nav>
             
-   <div>
+   <div style="min-height: 100%;">
      <br>
      <br>
+  
     {% block content %}
     
     {% endblock %}
     </div>
     <br>
     <br>
-    
    
+   
+    <div class="container-fluid" style="padding: 0px; background: #000000;">
+    <div style="height:auto;width:100%;">
+      <div class="col-sm-4 " style="padding-top:20px;">
+        <div class="text-center"><span class="foot-h ">ApertureMinimus</span><br>
+        <div class="hor"></div></div>
+        <div class="foot-t"><span class="">sfjsldfjkldjsfalsjfdsjf asdfj;asljfdalsdf afkjdaflkjalkfda asfjlkajsflsaf  fdsfsdf s f sfdsfsdf sfsd</span></div>
+        <br>
+      </div>
+      <div class="col-sm-4 text-center" style="padding-top:20px;">
+        <div class="text-center"><span class="foot-h">Social</span><br><div class="hor"></div></div>
+        <a href="https://www.quora.com/profile/Harshadeep-Pahurkar"><i class="fa fa-quora fi" style="color:#ffffff;"> </i></a>&nbsp;
+        <a href="https://www.facebook.com/Aperture-Minimus-Photography-380065635828110/"><i class="fa fa-facebook-official fi" style="color:#ffffff;" > </i></a>&nbsp;
+        <a href="https://www.youtube.com/channel/UCSzV3oKfogk57furA14KrwQ"><i class="fa fa-youtube-play fi" style="color:#ffffff;"></i></a>&nbsp;
+        <a href="#"><i class="fa fa-twitter fi" style="color:#ffffff;"></i></a>&nbsp;
+        <a href="https://www.instagram.com/the_chhayachitrakaar/"><i class="fa fa-instagram fi" style="color:#ffffff;"></i></a>&nbsp;
+        <br>
+      </div>
+      <div class="col-sm-4 text-center" style="padding-top:20px;">
+        <div class="text-center"><span class="foot-h">Contact</span><br><div class="hor"></div></div>
+        
+        <span class="foot-t"><i class="fa fa-envelope fi" style="color:#ffffff;"></i> &nbsp; Mail </span><br>
+        <br>
+        
+      </div>
+      
+    </div>
+    
+    </div>
+   
+
+  
 </body>
 </html>

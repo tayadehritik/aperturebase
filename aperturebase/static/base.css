@@ -1,4 +1,6 @@
-body {
+html,body {
     background: white;
+    height: 100%;
+    margin: 0;
     
 }
