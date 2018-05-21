@@ -41,6 +41,10 @@
         font-family: 'Oswald';
         color: white;
       }
+      .toppad{
+            padding-top: 210px;
+            padding-left: 50px;
+        }
       .foot-t{
         color: white;
         font-family: 'Viga';
@@ -98,8 +102,12 @@
             font-size: 21px;
             
           }
+          
           .foot-h{
             font-size:21px;
+          }
+          .fhome{
+            font-size:50px;
           }
           .hor{
             width: 60px;
@@ -142,6 +150,12 @@
             font-size: 15px;
             margin-left: 35px;
             margin-right: 35px;
+          }
+          .toppad{
+            padding-top: 20px;
+          }
+          .fhome{
+            font-size:25px;
           }
           .foot-h{
             font-size:18px;
@@ -199,7 +213,7 @@
                       <li class="active"><a href="{% url 'homeurl' %}" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Home</b></a></li>
                       
                       <li ><a href="{% url 'articles:list'  %}" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Articles</b></a></li>
-                      <li><a href="#" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Page 3</b></a></li>
+                      <li><a href="{% url 'homeurl' %}#about" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>About</b></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                      
@@ -221,7 +235,7 @@
     <br>
    
    
-    <div class="container-fluid" style="padding: 0px; background: #000000;">
+    <div id = 'footer' class="container-fluid" style="padding: 0px; background: #000000;">
     <div style="height:auto;width:100%;">
       <div class="col-sm-4 " style="padding-top:20px;">
         <div class="text-center"><span class="foot-h ">ApertureMinimus</span><br>
