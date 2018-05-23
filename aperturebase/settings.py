@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'aperturebase.urls'
-
+CSRF_COOKIE_DOMAIN = None
 
 TEMPLATES = [
     {

@@ -52,6 +52,7 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-5">
         <div class="fieldWrapper" style="padding-top:10px;">
+                
                 {{ form.Name.errors }}
                 <label class = 'form-f' style="border: 0; " for="{{ form.Name.id_for_label }}">Name:</label>
                 {{ form.Name }}
@@ -59,6 +60,7 @@
         </div>
         <div class="col-lg-5">
                 <div class="fieldWrapper" style="padding-top:10px;">
+                       
                         {{ form.sender.errors }}
                         <label class='form-f' style="border: 0;" for="{{ form.sender.id_for_label }}">Email:</label>
                         {{ form.sender }}
@@ -71,6 +73,7 @@
             
             <div class="col-lg-10">
                     <div class="fieldWrapper" style="padding-top:10px;">
+                       
                             {{ form.subject.errors }}
                             <label class="form-f" style="border: 0;" for="{{ form.subject.id_for_label }}">Subject:</label>
                             {{ form.subject }}
@@ -81,6 +84,7 @@
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10">
                 <div class="fieldWrapper" style="padding-top:10px;">
+                              
                         {{ form.message.errors }}
                         <label class="form-f" style="border: 0;" for="{{ form.message.id_for_label }}">Message:</label>
                         {{ form.message }}
