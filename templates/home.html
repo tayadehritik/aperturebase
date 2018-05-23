@@ -31,8 +31,78 @@
     <div id = "about" class="text-center"><p style="font-family: 'Viga';">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum pharetra turpis, vitae fermentum sapien consectetur sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus tellus est, facilisis vitae dolor ut, semper tristique odio.</p></div>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid text-center foot-h" style="color:#000000;">
+            <span style="background: #000000; color: #ffffff;padding-left: 10px;padding-right: 10px;">03</span> &nbsp;
+            <span>CONTACT</span>
+    </div>
+    <br>
+    <br>
+    <br>
     
+    <div class="container-fluid" >
     
+    <form class=''  action="{% url 'homeurl' %}" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5">
+        <div class="fieldWrapper" style="padding-top:10px;">
+                {{ form.Name.errors }}
+                <label class = 'form-f' style="border: 0; " for="{{ form.Name.id_for_label }}">Name:</label>
+                {{ form.Name }}
+            </div>
+        </div>
+        <div class="col-lg-5">
+                <div class="fieldWrapper" style="padding-top:10px;">
+                        {{ form.sender.errors }}
+                        <label class='form-f' style="border: 0;" for="{{ form.sender.id_for_label }}">Email:</label>
+                        {{ form.sender }}
+                </div>
+        </div><br>
+        <div class="col-lg-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            
+            <div class="col-lg-10">
+                    <div class="fieldWrapper" style="padding-top:10px;">
+                            {{ form.subject.errors }}
+                            <label class="form-f" style="border: 0;" for="{{ form.subject.id_for_label }}">Subject:</label>
+                            {{ form.subject }}
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                <div class="fieldWrapper" style="padding-top:10px;">
+                        {{ form.message.errors }}
+                        <label class="form-f" style="border: 0;" for="{{ form.message.id_for_label }}">Message:</label>
+                        {{ form.message }}
+                </div>
+                </div>
+        </div>
+        <br>
+        <div class="text-center"><input class = 'btn text-center ' style="background-color:black;font-family: 'Oswald';font-size:18px; width: auto;color: #ffffff;" type="submit" value="Send" /></div>
+    </form>
+    <br>
+   
+    </div>
+    <div id = 'message' class="container">
+        {% for message in messages %}
+           
+        <div class="alert alert-success text-center">{{message}}</div> 
+        
+        {% endfor %}
+    </div>        
+    
+     
+     
     
 
 {% endblock %}

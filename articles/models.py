@@ -40,7 +40,14 @@ class Articles(models.Model):
 
     
 
+class Message(models.Model):
+    name = models.CharField(max_length=100)
+    sender = models.CharField(max_length=500)
+    subject = models.CharField(max_length=500)
+    message = models.TextField()
 
+    def __str__(self):
+        return self.name
 
 
 
