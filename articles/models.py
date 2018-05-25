@@ -50,4 +50,15 @@ class Message(models.Model):
         return self.name
 
 
+class Cat(models.Model):
+    CatHead = models.CharField(max_length=100,null=True)
+    Thumb = models.ImageField(default = 'default.png',blank=True)
+    
 
+    def __str__(self):
+        return self.CatHead
+       
+
+labels = ['im0','im1','im2','im3','im4','im5','im6','im7','im8','im9']
+for i in labels:
+    Cat.add_to_class(i, models.ImageField(default='default.png',blank=True))

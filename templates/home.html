@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
 {% block content %}
-   
+
+        
     <div class="container-fluid" style="background: #000000;height: auto;">
         <div class="row">
         <div class=""><div class="col-lg-6" style="background: #000000;"><div  class="toppad"><span style="color: #ffffff;font-family: 'Viga';" class="fhome">Hello;<br></span><span class= 'fhome' style="font-family: 'Viga';color: #ffffff;"> I'M HARSHADEEP PAHURKAR AND I'M A PHOTOGRAPHER. </span></div> </div></div>
@@ -11,13 +12,27 @@
     <br>
     <br>
     <br>
-    <div class="container-fluid text-center foot-h" style="color:#000000;">
+    <br>
+    <div  class="container-fluid text-center foot-h" style="color:#000000;">
         <span style="background: #000000; color: #ffffff;padding-left: 10px;padding-right: 10px;">01</span> &nbsp;
         <span>PORTFOLIO</span>
     </div>
     <br>
-    <br>
-    <br>
+    
+    <div class="container-fluid padder">
+        <div class="row " >
+                {% for i in Cats %}
+                
+                <div  data-url= "{{i.Thumb.url}}" class="col-md-4 " style="padding: 2px;"  >
+                <div class='vis'>
+                       <img   src = "{{i.Thumb.url}}" class="img-responsive dis" width=500 height=500  />
+                        <div class="overlay"><div class="text-center text foot-h"  style="color:#000000;font-size: 20px;">{{i.CatHead}}</div></div>
+                </div>
+                </div>
+                
+                {% endfor %}
+        </div>
+   </div>
     <br>
     <br>
     <br>

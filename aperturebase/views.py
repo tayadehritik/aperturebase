@@ -4,11 +4,15 @@ from .forms import ContactForM
 from django.core.mail import send_mail
 from django.contrib import messages
 
-from articles.models import Message
+from articles.models import Message, Cat
 
 
 def home(request):
         #return HttpResponse('hey buddy you\'re at home')
+
+        Cats = Cat.objects.all()
+        
+
         if request.method == "POST":
                 form = ContactForM(request.POST)
                 if form.is_valid():
@@ -35,4 +39,7 @@ def home(request):
                 form = ContactForM()
 
 
-        return render(request, 'home.html',{'form':form})
+        
+        return render(request, 'home.html',{'form':form,'Cats':Cats})
+
+

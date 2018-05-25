@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$',views.home,name='homeurl'),
     url(r'^articles/', include('articles.urls'), name='articlesurl'),
+    
+   
 
 ]
 

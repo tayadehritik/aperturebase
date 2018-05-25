@@ -37,6 +37,21 @@
           font-family: 'Arkhip';
          src:  url("{% static 'Arkhip_font.ttf' %}")  format('truetype'); 
       } 
+      .text{
+        position: absolute;
+        top: 40%;
+        left: 40%;
+      }
+      .vis .text {
+        visibility: hidden;
+      }
+      .dis:hover{
+        opacity: 0;
+      }
+      .vis:hover .text {
+        visibility: visible;
+       
+      }
       input{
         border: 0;
         border-bottom: 2px solid black;
@@ -120,6 +135,9 @@
             font-size: 21px;
             
           }
+          .padder{
+            padding: 100px;
+          }
           
           .foot-h{
             font-size:21px;
@@ -172,6 +190,9 @@
             margin-left: 25px;
             margin-right: 25px;
           }
+          .padder{
+            padding: 10px;
+          }
           .toppad{
             padding-top: 30px;
             padding-bottom: 30px;
@@ -218,6 +239,7 @@
           }
         }
         </style>
+      
    
 </head>
 <body>
