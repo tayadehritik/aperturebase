@@ -25,7 +25,7 @@
                 
                 <div  data-url= "{{i.Thumb.url}}" class="col-md-4 " style="padding: 2px;" >
                 <div class='vis'>
-                       <img   src = "{{i.Thumb.url}}" class="img-responsive dis" width=500 height=500  />
+                       <a href= "{% url 'cats:categories' CatHead=i.CatHead  %}" > <img   src = "{{i.Thumb.url}}" class="img-responsive dis" width=500 height=500  /></a>
                         <div class="overlay"><div class="text-center text foot-h"  style="color:#000000;font-size: 20px;">{{i.CatHead}}</div></div>
                 </div>
                 </div>

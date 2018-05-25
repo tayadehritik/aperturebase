@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+    <div class="container-fluid">
+        <div class="row">
+                 {% for i in c %}
+                        <div class="col-lg-4" style="padding: 0px;">
+                        <img src="{{i}}"  class="img-responsive"   />
+                        </div>
+
+
+                 {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
