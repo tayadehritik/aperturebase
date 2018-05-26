@@ -10,7 +10,8 @@
 <!-- iOS Safari -->
   <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'Gt.png' %}" />
+    <title>Aperture Minimus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
@@ -78,8 +79,9 @@
       .foot-t{
         color: white;
         font-family: 'Viga';
-        margin-left: 50px;
-        margin-right: 50px;
+        
+        margin-left: 30px;
+        margin-right: 30px;
       }
 
       .hor{
@@ -137,6 +139,7 @@
           }
           .padder{
             padding: 100px;
+            padding-top: 50px;
           }
           
           .foot-h{
@@ -192,6 +195,7 @@
           }
           .padder{
             padding: 10px;
+            
           }
           .toppad{
             padding-top: 30px;
@@ -206,6 +210,7 @@
           .foot-h{
             font-size:18px;
           }
+          
           .hor{
             
             width:30px;
@@ -259,12 +264,12 @@
                     <ul class="nav navbar-nav">
                       <li class="active"><a href="{% url 'homeurl' %}" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Home</b></a></li>
                       
-                      <li ><a href="{% url 'articles:list'  %}" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Articles</b></a></li>
+                      <li ><a href="{% url 'articles:list'  %}" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Blog</b></a></li>
                       <li><a href="{% url 'homeurl' %}#about" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>About</b></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                      
-                      <li><a href="#" style="font-family: 'Viga';text-transform: uppercase;color:white;"><span class="glyphicon glyphicon-log-in"></span><b> Right Page</b></a></li>
+                      <li><a href="{% url 'homeurl' %}#contact" style="font-family: 'Viga';text-transform: uppercase;color:white;"><b>Contact</b></a></li>
                     </ul>
                   </div>
                 </div>
@@ -287,7 +292,7 @@
       <div class="col-sm-4 " style="padding-top:20px;">
         <div class="text-center"><span class="foot-h ">ApertureMinimus</span><br>
         <div class="hor"></div></div>
-        <div class="foot-t"><span class="">sfjsldfjkldjsfalsjfdsjf asdfj;asljfdalsdf afkjdaflkjalkfda asfjlkajsflsaf  fdsfsdf s f sfdsfsdf sfsd</span></div>
+        <div class="foot-t "><span class="">An Awesomely Weird Photographer, Cinematographer And Motion Designer From India.</span></div>
         <br>
       </div>
       <div class="col-sm-4 text-center" style="padding-top:20px;">
@@ -302,7 +307,7 @@
       <div class="col-sm-4 text-center" style="padding-top:20px;">
         <div class="text-center"><span class="foot-h">Contact</span><br><div class="hor"></div></div>
         
-        <span class="foot-t"><i class="fa fa-envelope fi" style="color:#ffffff;"></i> &nbsp; Mail </span><br>
+        <span class="foot-t"><i class="fa fa-envelope fi" style="color:#ffffff;"></i> &nbsp; &nbsp; Harshadeeppahurkar@gmail.com </span><br>
         <br>
         
       </div>

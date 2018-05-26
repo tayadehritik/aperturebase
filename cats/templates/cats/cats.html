@@ -1,16 +1,52 @@
 {% extends 'base.html' %}
 {% block content %}
+    <script>
     
+    $( document ).ready(function() {
+        $('#myModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget) // Button that triggered the modal
+                var recipient = button.data('imurl')
+                var tit = button.data('title') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this)
+                var sd = modal.find('.modal-body')
+                modal.find('.modal-title').text(tit)
+                
+                modal.find('.modal-body').html("<img src='"+recipient+"' class='img-responsive' />")
+                    })
+        });
+    
+    
+    </script>
     <div class="container-fluid">
         <div class="row">
                  {% for i in c %}
                         <div class="col-lg-4" style="padding: 0px;">
-                        <img src="{{i}}"  class="img-responsive"   />
+                        <img src="{{i}}"  class="img-responsive btn" data-toggle="modal" data-title="{{cat.CatHead}}" data-imurl="{{i}}" data-target="#myModal"  style="padding: 0px;" />
                         </div>
-
+                       
 
                  {% endfor %}
         </div>
+        {% for i in c %}
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">{{cat.CatHead}}</h4>
+                </div>
+                <div class="modal-body">
+                    <img id="mi" src="#" class="img-responsive" />
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
     </div>
 
 {% endblock %}
