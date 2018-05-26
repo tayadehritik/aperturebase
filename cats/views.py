@@ -12,6 +12,8 @@ def cat(request, CatHead):
     c = list()
     for i in labels:
         b = getattr(cat,i).url
-        c.append(b)
+        if(b != "/media/default.png"):
+
+            c.append(b)
     
     return render(request, 'cats/cats.html',{'cat':cat,'c':c})
