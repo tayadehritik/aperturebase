@@ -29,7 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['13.232.53.55','127.0.0.1','localhost','apertureminimus.tk','http://www.apertureminimus.tk/','www.apertureminimus.tk']
 
-
+GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-119861755-1'
+GOOGLE_ANALYTICS_SITE_SPEED = True
 
 # Application definition
 
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'analytical',
      'articles',
      'cats',
 ]

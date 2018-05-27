@@ -1,7 +1,9 @@
 {% load static from staticfiles %}
+{% load analytical %}
 <!DOCTYPE html>
 <html>
 <head>
+    {% analytical_head_top %}
     <meta charset="utf-8" />
     <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color" content="#000000">
@@ -245,10 +247,10 @@
         }
         </style>
       
-   
+      {% analytical_head_bottom %} 
 </head>
 <body>
-  
+    {% analytical_body_top %}
         <nav class="navbar navbar-fixed-top navbar-inverse" >
                 <div class="container-fluid">
                   <div class="navbar-header">
@@ -317,6 +319,6 @@
     </div>
    
 
-  
+    {% analytical_body_bottom %}
 </body>
 </html>
