@@ -19,8 +19,8 @@
     </div>
     <br>
     
-    <div class="container-fluid ">
-        <div class="row padder" >
+    <div class="container-fluid "  >
+        <div class="row padder"  >
                 {% for i in Cats %}
                 
                 <div  data-url= "{{i.Thumb.url}}" class="col-md-4 " style="padding: 2px;" >
@@ -34,20 +34,22 @@
         </div>
    </div>
     <br>
-    <br>
     
-    <div class="container-fluid text-center foot-h" style="color:#000000;">
-            <span style="background: #000000; color: #ffffff;padding-left: 10px;padding-right: 10px;">02</span> &nbsp;
+    <br>
+
+    
+    <div class="container-fluid text-center foot-h" style="color:#000000;"  id="about" >
+            <span  style="background: #000000; color: #ffffff;padding-left: 10px;padding-right: 10px;">02</span> &nbsp;
             <span>ABOUT</span>
     </div>
     <br>
     <br>
-    <div id = "about" class="text-center"><p style="font-family: 'Viga';"> Hello guys, I Am Harshadeep Pahurkar, I am a Small town photographer and motion designer from India, I have been doing photography, Since 2016, You can check my work and read interesting photography blogs here. You can use the contact form to strike up a conversation with me, I am listening, Let’s talk.</p></div>
+    <div  class="text-center"><p style="font-family: 'Viga';"> Hello guys, I Am Harshadeep Pahurkar, I am a Small town photographer and motion designer from India, I have been doing photography, Since 2016, You can check my work and read interesting photography blogs here. You can use the contact form to strike up a conversation with me, I am listening, Let’s talk.</p></div>
     <br>
     <br>
     <br>
     
-    <div class="container-fluid text-center foot-h" style="color:#000000;">
+    <div class="container-fluid text-center foot-h" style="color:#000000;" id="contact">
             <span style="background: #000000; color: #ffffff;padding-left: 10px;padding-right: 10px;">03</span> &nbsp;
             <span>CONTACT</span>
     </div>
@@ -55,7 +57,7 @@
     <br>
     <br>
     
-    <div class="container-fluid" id="contact" >
+    <div class="container-fluid" >
     
     <form class=''  action="{% url 'homeurl' %}" method="post">
         {% csrf_token %}
