@@ -33,7 +33,7 @@ def article_detail(request,slug):
         else:
             pass
     rev_url = reverse('articles:detail',kwargs={'slug': art1.slug})
-    homeurl = 'www.apertureminimus.in'
+    homeurl = 'www.apertureminimus.tk'
 
     Allobj = Articles.objects.all()
     for i in range(len(Allobj)):
