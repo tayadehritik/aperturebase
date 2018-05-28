@@ -22,7 +22,7 @@ def article_detail(request,slug):
         if(a!=-1):
             b = getattr(art1,i).url
             c =  getattr(art1, i+'cap')
-            if(body[a+12:a+15]=="por"):
+            if(body[a+11:a+14]=="por"):
 
                 
 
