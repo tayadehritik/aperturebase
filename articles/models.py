@@ -62,3 +62,5 @@ class Cat(models.Model):
 labels = ['im0','im1','im2','im3','im4','im5','im6','im7','im8','im9']
 for i in labels:
     Cat.add_to_class(i, models.ImageField(default='default.png',blank=True))
+    Cat.add_to_class(i+'_setting',models.TextField(null=True, blank=True))
+    Cat.add_to_class(i+'_head',models.CharField(max_length=500,blank=True))

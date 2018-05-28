@@ -12,8 +12,8 @@
                 var modal = $(this)
                 var sd = modal.find('.modal-body')
                 modal.find('.modal-title').text(tit)
-                
-                modal.find('.modal-body').html("<img src='"+recipient+"' class='img-responsive' />")
+                var set = button.data('setting')
+                modal.find('.modal-body').html("<img src='"+recipient+"' class='img-responsive' /><div class='foot-h' style='color:black;'>"+set+"</div>")
                     })
         });
     
@@ -21,9 +21,10 @@
     </script>
     <div class="container-fluid">
         <div class="row">
-                 {% for i in c %}
+                 {% for i,j in d.items %}
                         <div class="col-lg-4" style="padding: 0px;">
-                        <img src="{{i}}"  class="img-responsive btn" data-toggle="modal" data-title="{{cat.CatHead}}" data-imurl="{{i}}" data-target="#myModal"  style="padding: 0px;" />
+                       
+                        <img src="{{i}}"  class="img-responsive btn" data-toggle="modal" data-title="{{j.1|safe}}" data-setting="{{j.0}}" data-imurl="{{i}}" data-target="#myModal"  style="padding: 0px;" />
                         </div>
                        
 
@@ -35,7 +36,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">{{cat.CatHead}}</h4>
+                  <h4 class="modal-title foot-h" style="color: black;" >{{cat.CatHead}}</h4>
                 </div>
                 <div class="modal-body">
                     <img id="mi" src="#" class="img-responsive" />
