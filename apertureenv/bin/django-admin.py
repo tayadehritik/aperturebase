@@ -1,4 +1,4 @@
-#!/home/kali/aperturebase/apertureenv/bin/python3
+#!/home/ubuntu/aperturebase/apertureenv/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
