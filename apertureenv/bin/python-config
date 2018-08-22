@@ -1,4 +1,4 @@
-#!/home/kali/aperturebase/apertureenv/bin/python
+#!/home/ubuntu/aperturebase/apertureenv/bin/python
 
 import sys
 import getopt
