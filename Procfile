@@ -1,0 +1,1 @@
+web: gunicorn aperturebase.wsgi --log-file -
