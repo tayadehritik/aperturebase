@@ -27,7 +27,7 @@ SECRET_KEY = 'k!u-0=l$(=*^_d$baqs=f!n5@-ivkrnat+0@z*s5$#aij^b#_='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.232.53.55','127.0.0.1','localhost','apertureminimus.tk','http://www.apertureminimus.tk/','www.apertureminimus.tk']
+ALLOWED_HOSTS = ['radiant-shelf-90520.herokuapp.com','13.232.53.55','127.0.0.1','localhost','apertureminimus.tk','http://www.apertureminimus.tk/','www.apertureminimus.tk']
 
 GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-119907704-1'
 GOOGLE_ANALYTICS_SITE_SPEED = True
